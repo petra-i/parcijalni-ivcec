@@ -20,7 +20,7 @@ const UserForm = ({ username, onInputChange, onSubmit }) => {
 						placeholder="e.g. facebook"
 						value={username}
 						onChange={onInputChange}
-						className="inputField"
+						className="mb-20"
 					/>
 				</Form.Group>
 

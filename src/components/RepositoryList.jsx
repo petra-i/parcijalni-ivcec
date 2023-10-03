@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 import PropTypes from "prop-types";
 
 const RepositoryList = ({ reposUrl, onReturn }) => {
@@ -27,13 +28,13 @@ const RepositoryList = ({ reposUrl, onReturn }) => {
 
 	return (
 		<div>
-			<h3>Repositories:</h3>
-			<ul>
+			<h5>Repositories:</h5>
+			<ListGroup className="mb-20">
 				{repos.map(repo => (
-					<li key={repo.id}>{repo.name}</li>
+					<ListGroup.Item key={repo.id}>{repo.name}</ListGroup.Item>
 				))}
-			</ul>
-			<Button variant="primary" onClick={onReturn}>
+			</ListGroup>
+			<Button className="primaryButton" variant="dark" onClick={onReturn}>
 				Reset
 			</Button>
 		</div>
