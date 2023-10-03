@@ -1,6 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const UserInfo = ({ userData }) => {
+	UserInfo.propTypes = {
+		userData: PropTypes.shape({
+			login: PropTypes.string.isRequired,
+			avatar_url: PropTypes.string.isRequired,
+			name: PropTypes.string,
+			location: PropTypes.string,
+			bio: PropTypes.string,
+		}),
+	};
+
 	return (
 		<div className="user-info-page">
 			<div className="user-info">

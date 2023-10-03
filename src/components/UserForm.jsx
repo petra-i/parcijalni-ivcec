@@ -1,8 +1,15 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 const UserForm = ({ username, onInputChange, onSubmit }) => {
+	UserForm.propTypes = {
+		username: PropTypes.string.isRequired,
+		onInputChange: PropTypes.func.isRequired,
+		onSubmit: PropTypes.func.isRequired,
+	};
+
 	return (
 		<div className="formContainer">
 			<Form>

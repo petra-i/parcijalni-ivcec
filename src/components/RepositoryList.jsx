@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 const RepositoryList = ({ reposUrl, onReturn }) => {
+	RepositoryList.propTypes = {
+		reposUrl: PropTypes.string.isRequired,
+		onReturn: PropTypes.func.isRequired,
+	};
+
 	const [repos, setRepos] = useState([]);
 
 	useEffect(() => {
