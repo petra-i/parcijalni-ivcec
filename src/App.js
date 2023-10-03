@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './App.css';
-import UserForm from './components/UserForm';
-import UserInfo from './components/UserInfo';
-import RepositoryList from './components/RepositoryList';
+import React, { useState } from "react";
+import "./App.css";
+import UserForm from "./components/UserForm";
+import UserInfo from "./components/UserInfo";
+import RepositoryList from "./components/RepositoryList";
 
 function App() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
   const [showInputView, setShowInputView] = useState(true);
 
@@ -20,7 +20,7 @@ function App() {
       setUserData(data);
       setShowInputView(false);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
       setUserData(null);
     }
   };
@@ -34,7 +34,7 @@ function App() {
       {showInputView ? (
         <UserForm username={username} onInputChange={handleInputChange} onSubmit={fetchData} />
       ) : (
-        <div>
+        <div className="infoPage">
           <UserInfo userData={userData} />
           <RepositoryList reposUrl={userData.repos_url} onReturn={handleReturnToInputView} />
         </div>

@@ -19,7 +19,7 @@ const UserInfo = ({ userData }) => {
 				<img
 					style={{ width: "150px", height: "150px", borderRadius: "50%" }}
 					src={userData.avatar_url}
-					alt={`${userData.login}'s avatar`}
+					alt={`${userData.login}"s avatar`}
 				/>
 				<h6>Name: {userData.name || ""}</h6>
 				<h6>Location: {userData.location || ""}</h6>
